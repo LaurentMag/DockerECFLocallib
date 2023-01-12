@@ -7,12 +7,15 @@
 	"item": [
 		{
 			"name": "http://localhost:8080/clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        <iframe src=\"javascript:alert(`xss`)\">\n}",
+					"raw": "{\n    \"nom\": \"Dutois\",\n    \"prenom\": \"robert\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,15 +23,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/Products",
+					"raw": "http://localhost:8080/clients",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "8080",
 					"path": [
-						"api",
-						"Products"
+						"clients"
 					]
 				}
 			},
