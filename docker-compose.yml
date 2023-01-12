@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: frontend
+    build: ./ECF-cda-frontEnd
+    ports:
+      - 3000:3000
+    depends_on:
+      - api_spring
+    volumes:
+      - .:/use/app/
+
+  api_spring:
+    build: ./ECF-cda-backEnd
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - "./data:/data/db"

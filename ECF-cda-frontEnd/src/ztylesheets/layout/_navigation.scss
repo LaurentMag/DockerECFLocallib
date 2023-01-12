@@ -1,0 +1,66 @@
+.navbar {
+  background-color: $color__background-navbar;
+  display: flex;
+  align-items: center;
+
+  .navlink__logo {
+    padding-inline: min(2%, 1rem);
+    padding-block: min(1%, 1em);
+    figure {
+      width: 90px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    width: 80%;
+
+    padding: min(2%, 20px);
+  }
+
+  li {
+    a {
+      position: relative;
+
+      font-size: 1.3rem;
+      font-weight: 900;
+
+      color: rgb(206, 206, 206);
+    }
+    // change style when link is actived
+    .active {
+      isolation: isolate;
+      color: $nagivation-link-color-hover;
+
+      &::after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        width: 100%;
+        height: 5px;
+        background-color: $nagivation-link-color-hover;
+        bottom: -50%;
+        left: 0;
+      }
+    }
+  }
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navlink__active {
+  text-decoration: none;
+  color: white;
+}
+
+.navlink__Notactive {
+  text-decoration: none;
+  color: rgb(87, 173, 190);
+}

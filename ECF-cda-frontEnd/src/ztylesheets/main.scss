@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "abstracts/variables", "abstracts/mixins";
+
+// 2. Vendors
+@import "vendors/normalize";
+
+// 3. Base stuff
+@import "base/base", "base/typography";
+
+// 4. Layout-related sections
+@import "layout/navigation";
+
+// 5. Components
+@import "components/button", "components/unitClient", "components/unitVehicle", "components/input",
+  "components/vehicleUnitHome", "components/modal", "components/filter", "components/locationresumeunit";
+
+// 6. Page-specific styles
+@import "pages/home", "pages/clientspage", "pages/vehiclepage", "pages/gestion";
+
+// 7. Themes
+// @import "themes/default";

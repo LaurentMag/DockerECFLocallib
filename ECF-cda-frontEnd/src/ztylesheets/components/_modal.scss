@@ -1,0 +1,33 @@
+.modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @include flex-modulable(null, center, center);
+
+  z-index: 2;
+}
+
+.modal__content {
+  width: min(35rem, 90%);
+  height: 40rem;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+
+  @include flex-modulable(column, space-around, center, 1rem);
+
+  .modal__form {
+    @include flex-modulable(column, null, null, 1rem);
+  }
+
+  .modal__buttons-container {
+    display: flex;
+    gap: 1rem;
+
+    width: 50%;
+
+    button {
+      width: min(10rem, 90%);
+    }
+  }
+}

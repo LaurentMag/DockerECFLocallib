@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "52d9a31c-683f-4fc6-88f2-653c513b0005",
+		"name": "ECF-Localib-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/clients",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        <iframe src=\"javascript:alert(`xss`)\">\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/vehicules",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n      \"marque\": \"Renault\",\n      \"modele\": \"Sinic\",\n      \"immatriculation\": \"AA-001-AA\",\n      \"etat\": \"A\",\n      \"prixJournee\": 400,\n      \"disponible\": false,\n      \"type\": \"voiture\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/locations",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n      \"dateDebut\": \"2000-05-01\",\n      \"dateFin\": \"2000-07-01\",\n      \"client\": { \"id\": \"63936f2082983d3cc4058ff1\" },\n      \"vehicule\": { \"id\":  \"63936f2082983d3cc4058ff6\"}\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/debug/init",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/debug/init",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"debug",
+						"init"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

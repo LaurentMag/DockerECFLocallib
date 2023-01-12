@@ -1,0 +1,7 @@
+.gestion__main-container {
+  @include flex-modulable(column, null, center, 1rem);
+  padding: 1rem;
+}
+
+.gestionlocation__container {
+}
