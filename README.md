@@ -2,9 +2,15 @@
 
 ## Dockeriser le front et le back :
 
-Dans un terminal se déplacer sur le dossier racine "DockerFrontBack"
+Dans un terminal se placer dans le dossier ECF-cda-backEnd,
+Lancer la commande :
 
-Et lancer la commande :
+```
+docker-compose build
+```
+
+Se déplacer sur le dossier racine "DockerFrontBack",
+Lancer la commande :
 
 ```
 docker compose up
@@ -14,16 +20,11 @@ docker compose up
 
 ### Commandes déjà effectués :
 
-Dans le terminal, dans le dossier ./ECF-cda-backEnd ( pour un projet gradle )
+Dans le terminal, dans le dossier ./ECF-cda-backEnd ( pour un projet gradle ),
+si jamais des modifications sont effectués sur l'application Spring
 
 ```
 ./gradlew clean build
-```
-
-puis
-
-```
-docker-compose build
 ```
 
 ---
@@ -40,7 +41,7 @@ la request :
 http://localhost:8080/debug/init
 ```
 
-Permet de rajouter des données à la DB pour tests si besoins, ne fonctionne pas une fois build et dockerisé.
+est prévue pour fonctionné uniquement avec le profil dev, avec le build actuel et la dockerisation celle-ci ne sera pas acessible.
 
 ---
 
