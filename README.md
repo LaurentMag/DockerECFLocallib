@@ -49,3 +49,4 @@ est prévue pour fonctionné uniquement avec le profil dev, avec le build actuel
 
 Ajouter des data avec postman, pour l'affichage sur le front
 ( liaison avec entre le back et le front incomplêtes, toutes les fonctionnalités ne sont pas fonctionnelles, mais affichage / suppréssion / edition partielle des clients et véhicules fonctionnne. )
+.
